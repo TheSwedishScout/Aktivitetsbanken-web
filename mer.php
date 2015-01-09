@@ -57,9 +57,10 @@ if (isset($_GET["id"])){
 		
 		echo "<h2>Genomförande</h2>
 			<p>";
-			 $text = str_replace("#", "<br> #", $post->descr_main);
+			$text = str_replace("# Att tänka på", "</p><h2>Att tänka på</h2><p> Att tänka på", $post->descr_main);
+			 $text = str_replace("#", "<br> #", $text);
 			 $text = str_replace("*", "<li>", $text);
-			 $text = str_replace("# Att tänka på", "</p><h2>Att tänka på</h2><p> Att tänka på", $text);
+			 
 			
 			 echo $text;
 			 
