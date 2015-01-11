@@ -26,9 +26,11 @@ $urlPre ="http://devscout.mikaelsvensson.info:10081/api/v1/";
 	<input type="search" name="sokfras">
     <input type="submit">
     <br>
+    Min ålder
     <input type="range" style="width: 200px !important " name="age_1" min="0" max="40" value="0" onchange="updateTextInput1(this.value);">
     <input type="text" id="textInput1" value="0">
     <br>
+    Max ålder
     <input type="range" style="width: 200px !important " name="age_2" min="0" max="40" value="0" onchange="updateTextInput2(this.value);"> 
     <input type="text" id="textInput2" value="0">
 </form>

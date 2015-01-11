@@ -31,6 +31,7 @@ if (isset($_GET["id"])){
 	$url=$urlPre."activities?id[]=".$sokOrd;
 	$contents = file_get_contents($url); 
 	$results = json_decode($contents); 
+	
 
 	echo "<div id='output' class='zeroMargin_mobile zeroMargin_tablet'>";
 	
@@ -139,6 +140,7 @@ echo "</div>";
 if (isset($_GET["sokfras"]) or isset($_GET["age_1"]) or isset($_GET["age_2"]) ){
 	
 	$sokOrd =$_GET["sokfras"];
+	$sokOrd = trim ($sokOrd);
 	
 	if (isset($_GET["age_1"]) && $_GET["age_1"] != 0){
 		 $sokOrd=$sokOrd."&age_1=".$_GET["age_1"];
@@ -149,6 +151,13 @@ if (isset($_GET["sokfras"]) or isset($_GET["age_1"]) or isset($_GET["age_2"]) ){
 	if (isset($_GET["age_2"]) && $_GET["age_2"] != 0){
 		 $sokOrd=$sokOrd."&age_2=".$_GET["age_2"];
 	}
+	
+		/*	räkna ord
+		skicka en förfrågan på varge ord 
+		om en aktivitet ligger i alla listor skriv först sedan i antal ordning	
+		*/
+
+	
 		$context  = stream_context_create(array('http' => array('header' => 'Accept: application/xml')));
 		$url=$urlPre."activities?text=".$sokOrd;
 		$contents = file_get_contents($url); 

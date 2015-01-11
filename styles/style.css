@@ -20,6 +20,22 @@ font-variant: initial;
 font-size:20px;
 margin-top:2px;
 }
+#header h1 a{
+	font-weight: bold;
+	font-variant: initial;
+	font-size:20px;
+	margin-top:2px;
+	color:rgba(0,0,0,1.00);
+	text-decoration: none;	
+}
+#header h1 a:hover{
+	font-weight: bold;
+	font-variant: initial;
+	font-size:20px;
+	margin-top:2px;
+	text-decoration: underline;
+	color:rgba(16,47,0,1.00));
+}
 img, object, embed, video {
 	max-width: 100%;
 }
